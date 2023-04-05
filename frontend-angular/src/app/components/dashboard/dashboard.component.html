@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div>
+    <div class="task-header" *ngFor="let task of tasks">
+      <h3>{{ task.name }}</h3>
+      <span>{{ task.days }}</span>
+    </div>
+  </div>
+  <div class="task-form">
+    <form [formGroup]="form">
+      <label>Task Name</label>
+      <p>
+        <input type="text" formControlName="name">
+      </p>
+      <label>Duration (Day)</label>
+      <p>
+        <input type="number" formControlName="days">
+      </p>
+      <p>
+        <button (click)="click()">Add</button>
+      </p>
+    </form>
+  </div>
+</div>
